@@ -9,56 +9,35 @@
 import UIKit
 
 class DefinitionViewController: UIViewController {
-
+    
+    @IBOutlet weak var birthYearLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     
     @IBOutlet weak var emojiDefLabel: UILabel!
     
-    var emoji = "no emoji"
+    var emoji = Emoji()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         //print(emoji)
-        emojiLabel.text = emoji
+        
+        emojiLabel.text = emoji.stringEmoji
+        birthYearLabel.text = "Origination year: \(emoji.birthYear)"
+        categoryLabel.text = "Category: \(emoji.category)"
+        emojiDefLabel.text = emoji.definition
         
         
-        if emoji == "😎" {
-        emojiDefLabel.text = "A happy cool dude"
-        }
-        if emoji == "👿" {
-            emojiDefLabel.text = "Im a mad devil"
-        }
-        if emoji == "🐼" {
-            emojiDefLabel.text = "I love pandas!"
-        }
-        if emoji == "😏" {
-            emojiDefLabel.text = "Im up to something no good!"
-        }
-        if emoji == "😹" {
-            emojiDefLabel.text = "Hysterical!"
-        }
-        if emoji == "👍" {
-            emojiDefLabel.text = "Thumbs up, WAY up!"
-        }
-        if emoji == "🎁" {
-            emojiDefLabel.text = "A gift for you!"
-        }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
-    
-    
-    
     
     
     
@@ -74,12 +53,12 @@ class DefinitionViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

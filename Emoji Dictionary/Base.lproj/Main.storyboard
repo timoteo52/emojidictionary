@@ -68,19 +68,41 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="S1C-0E-0St" firstAttribute="centerX" secondItem="2J8-Ek-pY9" secondAttribute="centerX" id="Fey-gN-acF"/>
+                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BirthYear: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-6v-K34">
+                                <rect key="frame" x="230" y="484" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXJ-M6-6FM">
+                                <rect key="frame" x="217" y="438" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tZ9-Im-njU" firstAttribute="top" secondItem="ITY-my-uPh" secondAttribute="bottom" constant="40" id="0X3-X7-x97"/>
+                            <constraint firstItem="IXJ-M6-6FM" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="89M-91-oTp"/>
                             <constraint firstItem="tZ9-Im-njU" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="9F9-zY-BOu"/>
+                            <constraint firstItem="HhH-6v-K34" firstAttribute="top" secondItem="IXJ-M6-6FM" secondAttribute="bottom" constant="25" id="EDU-X0-4JS"/>
                             <constraint firstItem="tZ9-Im-njU" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="ENH-wY-Xr7"/>
                             <constraint firstItem="2J8-Ek-pY9" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="Hmj-r6-EXA"/>
+                            <constraint firstItem="IXJ-M6-6FM" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="N7D-3z-R94"/>
+                            <constraint firstItem="HhH-6v-K34" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="Wea-Rb-u8Z"/>
                             <constraint firstItem="tZ9-Im-njU" firstAttribute="centerX" secondItem="kDL-f3-2QG" secondAttribute="centerX" id="d8o-py-ZSP"/>
+                            <constraint firstItem="IXJ-M6-6FM" firstAttribute="top" secondItem="S1C-0E-0St" secondAttribute="bottom" constant="25" id="pEJ-fd-Dau"/>
                             <constraint firstItem="S1C-0E-0St" firstAttribute="top" secondItem="tZ9-Im-njU" secondAttribute="bottom" constant="50" id="uOM-tM-hTf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="HhH-6v-K34" id="NPh-Vt-3Sc"/>
+                        <outlet property="categoryLabel" destination="IXJ-M6-6FM" id="Cav-gW-CfH"/>
                         <outlet property="emojiDefLabel" destination="S1C-0E-0St" id="Yy6-qA-0WF"/>
                         <outlet property="emojiLabel" destination="tZ9-Im-njU" id="ffX-Vz-g8Y"/>
                     </connections>
